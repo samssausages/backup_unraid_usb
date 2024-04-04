@@ -7,7 +7,7 @@ DESTINATIONS=("/mnt/user/backup/unraid_usb")
 SRC="/boot"
 
 # List anything you may want to exclude
-EXCLUDE=(--exclude=/.git/ --exclude=/.vscode/ --exclude=**/.vscode-server/ --exclude=/logs/)
+EXCLUDE=(--exclude=**/.git/ --exclude=**/.vscode/ --exclude=**/.vscode-server/ --exclude=/logs/)
 
 #### END USER DEFINABLE ####
 
