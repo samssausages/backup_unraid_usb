@@ -1,12 +1,14 @@
 !/Bin/Bash
-Create 1 To 1 USB Backup/Copy
-Define Source Directory
-SRC="/boot" EXCLUDE=(--exclude=/.git/ --exclude=/.vscode/ --exclude=**/.vscode-server/ --exclude=/logs/)
 
-Define An Array Of Destination Directories (Can Be 1 Or Many)
+# Define An Array Of Destination Directories (Can Be 1 Or Many)
 DESTINATIONS=("/mnt/user/backup/unraid_usb")
 
-Loop Over Each Destination
+# Define Source Directory
+SRC="/boot"
+EXCLUDE=(--exclude=/.git/ --exclude=/.vscode/ --exclude=**/.vscode-server/ --exclude=/logs/)
+
+
+# Loop Over Each Destination
 for DEST in "${DESTINATIONS[@]}"; do # Create a timestamp TIMESTAMP=$(date +"%Y-%m-%d--%H-%M-%S")
 
 # Backup directory path
