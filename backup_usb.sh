@@ -5,8 +5,11 @@ DESTINATIONS=("/mnt/user/backup/unraid_usb")
 
 # Define Source Directory
 SRC="/boot"
+
+# List anything you may want to exclude
 EXCLUDE=(--exclude=/.git/ --exclude=/.vscode/ --exclude=**/.vscode-server/ --exclude=/logs/)
 
+#### END USER DEFINABLE ####
 
 # Loop Over Each Destination
 for DEST in "${DESTINATIONS[@]}"; do # Create a timestamp TIMESTAMP=$(date +"%Y-%m-%d--%H-%M-%S")
